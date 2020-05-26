@@ -114,7 +114,7 @@ void MyWidget::create_TreeInfo()
 }
 
 
-void MyWidget::create_TreeInfo(LinkType node, NodeInfo *parent_NodeInfo, int type)
+void MyWidget::create_TreeInfo(LinkType node, NodeInfo *parent_NodeInfo, ETreeType type)
 {
     if (!node) return;
     NodeInfo *p;

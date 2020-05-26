@@ -27,7 +27,10 @@ public:
     void set_TreeHeight(size_t height);
     void set_rbtree(TreeType *t);
     TreeType* tree;
-    void create_TreeInfo(LinkType node, NodeInfo *parent_NodeInfo, int type);
+    void create_TreeInfo(LinkType node, NodeInfo *parent_NodeInfo, ETreeType type);
+    void adjust_TreeInfo(bool adjust_flag);
+    void adjust_TreeShape(LinkType node);
+    void move_Treex(int distance);
 public slots:
     void paintEvent(QPaintEvent *);
 private:

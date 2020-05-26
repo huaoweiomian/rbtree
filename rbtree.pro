@@ -18,15 +18,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    myrbtree.cpp \
     mywidget.cpp \
     rbtree.cpp \
-    rbtree1.cpp
+    rbtree1.cpp \
+    rbtree2.cpp
 
 HEADERS += \
     mainwindow.h \
+    myrbtree.h \
     mywidget.h \
     rbtree.h \
-    rbtree1.h
+    rbtree1.h \
+    rbtree2.h
 
 FORMS += \
     mainwindow.ui \
