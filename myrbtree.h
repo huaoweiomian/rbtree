@@ -27,6 +27,8 @@ public:
     mynode* head;
     void left_rotate(mynode *node);
     void right_rotate(mynode *node);
+    void rb_insert(mynode za);
+    void rb_insert_fixup(mynode* z);
 };
 
 #endif // MYRBTREE_H

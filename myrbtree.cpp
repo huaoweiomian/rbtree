@@ -42,4 +42,35 @@ void myrbtree::right_rotate(mynode *y)
     y->parent = x;
 }
 
+void myrbtree::rb_insert(mynode za)
+{
+    mynode* z = new mynode();
+    z->v = za.v;
+    mynode* y = nullptr;
+    mynode* x = head;
+    while (x != nullptr){
+        y = x;
+        if(z->v < x->v){
+            x = x->left;
+        }else{
+            x = x->right;
+        }
+    }
+    x->parent = y;
+    if(y == nullptr){
+        head = z;
+    } else if(z->v < y->v){
+        y->left = z;
+    }else{
+        y->right = z;
+    }
+    z->c = RED;
+    rb_insert_fixup(z);
+}
+
+void myrbtree::rb_insert_fixup(mynode *z)
+{
+
+}
+
 
