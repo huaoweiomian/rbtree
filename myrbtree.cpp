@@ -70,7 +70,38 @@ void myrbtree::rb_insert(mynode za)
 
 void myrbtree::rb_insert_fixup(mynode *z)
 {
-
+    while(z->parent->c == RED){
+        if (z->parent == z->parent->parent->left){
+            mynode* y = z->parent->parent->right;
+            if (y->c == RED){
+                z->parent->c = BLACK;
+                y->c = BLACK;
+                z->parent->parent->c = RED;
+                z = z->parent->parent;
+            }else if (z == z->parent->right){
+                z = z->parent;
+                left_rotate(z);
+                z->parent->c = BLACK;
+                z->parent->parent->c = RED;
+                right_rotate(z->parent->parent);
+            }
+        } else{
+            mynode* y = z->parent->parent->left;
+            if (y->c == RED){
+                z->parent->c = BLACK;
+                y->c = BLACK;
+                z->parent->parent->c = RED;
+                z = z->parent->parent;
+            }else if (z == z->parent->left){
+                z = z->parent;
+                right_rotate(z);
+                z->parent->c = BLACK;
+                z->parent->parent->c = RED;
+                left_rotate(z->parent->parent);
+            }
+        }
+    }
+    head->c = BLACK;
 }
 
 
