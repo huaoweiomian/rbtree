@@ -104,4 +104,11 @@ void myrbtree::rb_insert_fixup(mynode *z)
     head->c = BLACK;
 }
 
+void myrbtree::rb_delete(mynode *z)
+{
+    if(z->left == nullptr || z->right == nullptr){
+
+    }
+}
+
 
