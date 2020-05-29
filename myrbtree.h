@@ -29,6 +29,9 @@ public:
     void right_rotate(mynode *node);
     void rb_insert(mynode za);
     void rb_insert_fixup(mynode* z);
+    void rb_delete(mynode* z);
+    void rb_delete_fixup(mynode* z);
+    mynode* rb_tree_successor(mynode* z);
 };
 
 #endif // MYRBTREE_H
